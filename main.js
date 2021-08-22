@@ -9,17 +9,14 @@ canvas.width = width;
 canvas.height = height;
 canvas.style.left = "0px";
 canvas.style.top = "0px";
-canvas.style.position = "absolute";
+loop();
 
-window.onresize = function () {
-  width = window.innerWidth;
-  height = window.innerHeight;
-  canvas.width = width;
-  canvas.height = height;
+window.onresize = function () {};
+
+function loop() {
   background(25, 25, 25);
-  player.draw;
-};
+  Player.draw();
+}
 
-window.onresize();
-
-background(25, 25, 25);
+var target_fps = 30;
+setInterval(loop, 1000 / target_fps);
