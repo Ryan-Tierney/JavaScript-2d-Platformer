@@ -22,6 +22,7 @@ window.onresize = function () {
 function loop() {
   stepLoop();
   drawLoop();
+  keyEnd();
 }
 
 var objects = [];

@@ -5,8 +5,15 @@ class Player {
     this.size = 32;
     objects.push(this);
   }
+
+  step() {
+    // this.x = mouseX;
+    // this.y = mouseY;
+
+    if (keyPress.W) this.y += 64;
+  }
+
   draw() {
-    this.y += 5;
     strokeColor(255, 255, 255);
     noFill();
     rectangle(this.x, this.y, this.size, this.size);
