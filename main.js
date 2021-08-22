@@ -9,13 +9,36 @@ canvas.width = width;
 canvas.height = height;
 canvas.style.left = "0px";
 canvas.style.top = "0px";
-loop();
+canvas.style.position = "absolute";
 
-window.onresize = function () {};
+window.onresize = function () {
+  width = window.innerWidth;
+  height = window.innerHeight;
+  canvas.width = width;
+  canvas.height = height;
+  drawLoop();
+};
 
 function loop() {
+  stepLoop();
+  drawLoop();
+}
+
+var objects = [];
+window.onresize();
+var player = new Player(200, 200, 50, 50);
+
+function stepLoop() {
+  for (var i = 0; i < objects.length; i++) {
+    if (objects[i].draw) objects[i].draw();
+  }
+}
+
+function drawLoop() {
   background(25, 25, 25);
-  Player.draw();
+  for (var i = 0; i < objects.length; i++) {
+    if (objects[i].draw) objects[i].draw();
+  }
 }
 
 var target_fps = 30;
