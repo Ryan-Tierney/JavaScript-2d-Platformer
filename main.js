@@ -25,8 +25,13 @@ function loop() {
 }
 
 var objects = [];
+
+for (var i = 0; i < 32; i++) {
+  new Wall(i * 32, 400);
+}
+
 window.onresize();
-var player = new Player(200, 200, 50, 50);
+var player = new Player(50, 50);
 
 function stepLoop() {
   for (var i = 0; i < objects.length; i++) {
