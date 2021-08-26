@@ -7,7 +7,7 @@ height = window.innerHeight;
 
 canvas.width = width;
 canvas.height = height;
-canvas.style.left = "0px";
+canvas.style.left = "px";
 canvas.style.top = "0px";
 canvas.style.position = "absolute";
 
