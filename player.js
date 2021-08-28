@@ -28,7 +28,7 @@ class Player {
   draw() {
     this.step();
     strokeColor(255, 255, 255);
-    noFill();
     rectangle(this.x, this.y, this.size, this.size);
+    this.bbx.draw;
   }
 }

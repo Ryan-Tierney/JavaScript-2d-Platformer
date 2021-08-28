@@ -14,10 +14,19 @@ class bbox {
     this.x2 = x + this.w;
     this.y2 = y + this.h;
   }
+
+  collision(bbx) {
+    return (
+      this.x1 < bbx.x2 &&
+      this.x2 > bbx.x1 &&
+      this.y1 < bbx.y2 &&
+      this.y1 < bbx.y2 &&
+      this.y2 > bbx.y1
+    );
+  }
   draw() {
     noStroke();
     fillColor(255, 0, 0);
     rectangle(this.x1, this.y1, this.w, this.h);
-    this.bbx.draw;
   }
 }
