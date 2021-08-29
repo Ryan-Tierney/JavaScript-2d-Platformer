@@ -32,6 +32,7 @@ for (var i = 0; i < 32; i++) {
 }
 
 var player = new Player(50, 50);
+var enemy = new Enemy(200, 200);
 window.onresize();
 
 function stepLoop() {
